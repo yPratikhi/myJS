@@ -1,0 +1,37 @@
+html{
+    margin: 0;
+}
+
+.canva{
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+.btn{
+    height: 100px;
+    width: 100px;
+    border: solid black 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#grey{
+    background: gray;
+}
+
+#white{
+    background: white;
+}
+
+#blue{
+    background: blue;
+}
+
+#yellow{
+    background: yellow;
+}
+
+#purple{
+    background-color: purple;
+}

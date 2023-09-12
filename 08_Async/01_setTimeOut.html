@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut</title>
+  </head>
+  <body>
+    <h1>chai aur Code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayPratik = function () {
+      console.log("Pratik");
+    };
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Best JS Series";
+    };
+
+    // setTimeout(function () {
+    //   console.log("Pratik");
+    // }, 2000);
+
+    const stopMe = setTimeout(changeText, 2000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("Stop");
+      clearTimeout(stopMe);
+    });
+  </script>
+</html>

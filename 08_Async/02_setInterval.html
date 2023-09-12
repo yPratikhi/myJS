@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval</title>
+  </head>
+  <body>
+    <h1>chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // const sayPratik = function () {
+    //   console.log("Pratik");
+    // };
+
+    // const sayDate = function (str) {
+    //   console.log(str, Date.now());
+    // };
+    // const stopME = setInterval(sayDate, 2000, "hello");
+
+    // document.querySelector("#stop").addEventListener("click", function () {
+    //   clearInterval(stopME);
+    //   console.log("Stop");
+    // });
+
+    //Now Both the buttons
+
+    let intervals = null;
+    document.querySelector("#start").addEventListener("click", startInterval);
+    document.querySelector("#stop").addEventListener("click", stopInterval);
+
+    function startInterval() {
+      if (!intervals) {
+        intervals = setInterval(function () {
+          console.log("Interval is running.....");
+        }, 2000);
+      }
+    }
+
+    function stopInterval() {
+      if (intervals) {
+        // Only stop if interval is running
+        clearInterval(intervals);
+        intervals = null;
+        console.log("Interval stopped.");
+      }
+    }
+  </script>
+</html>
